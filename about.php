@@ -1,3 +1,7 @@
+<?php
+session_start(); ?>
+
+
 <!doctype html>
 <html lang="zxx">
 
@@ -16,45 +20,82 @@
 </head>
 
 <body>
-	
-	<header id="site-header" class="w3l-header fixed-top">
-		
+<header id="site-header" class="w3l-header fixed-top">
 		<nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-3">
 			<div class="container">
-				<h1><a class="navbar-brand" href="index.html"><span class="fa fa-play icon-log"aria-hidden="true"></span>Myflex</a></h1>
+				<h1><a class="navbar-brand" href="dashboard.php"><span class="fa fa-play icon-log"aria-hidden="true"></span>Myflex</a></h1>
 				<button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
 					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
 					aria-label="Toggle navigation">
-					
 					<span class="fa icon-expand fa-bars"></span>
 					<span class="fa icon-close fa-times"></span>
 				</button>
-
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item">
-							<a class="nav-link" href="index.html">Home</a>
+							<a class="nav-link" href="dashboard.php">Home</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="movies.html">movies</a>
+							<a class="nav-link" href="movies.php">Movies</a>
 						</li>
-
-						<li class="nav-item active">
-							<a class="nav-link" href="about.html">About</a>
+						<li class="nav-item  active">
+							<a class="nav-link" href="about.php">About</a>
 						</li>
 
 						<li class="nav-item">
-							<a class="nav-link" href="Contact_Us.html">Contact</a>
+							<a class="nav-link" href="Contact_Us.php">Contact</a>
 						</li>
 					</ul>
+					<div class="search-right">
+						<a href="#search" class="btn search-hny mr-lg-3 mt-lg-0 mt-4" title="search">Search <span class="fa fa-search ml-3" aria-hidden="true"></span></a>
+						
+						<div id="search" class="pop-overlay">
+							<div class="popup">
+								<form action="#" method="post" class="search-box">
+									<input type="search" placeholder="Search your Keyword" name="search" style="color:black" required="required" autofocus="">
+									<button type="submit" class="btn"><span class="fa fa-search"
+											aria-hidden="true"></span></button>
+								</form>
+								<div class="browse-items">
+									<h3 class="hny-title two mt-md-5 mt-4">Browse all:</h3>
+									<ul class="search-items">
+										<li><a href="movies.php">Action</a></li>
+										<li><a href="movies.php">Drama</a></li>
+										<li><a href="movies.php">Family</a></li>
+										<li><a href="movies.php">Thriller</a></li>
+										<li><a href="movies.php">Commedy</a></li>
+										<li><a href="movies.php">Romantic</a></li>
+										<li><a href="movies.php">Tv-Series</a></li>
+										<li><a href="movies.php">Horror</a></li>
+										<li><a href="movies.php">Action</a></li>
+										<li><a href="movies.php">Drama</a></li>
+										<li><a href="movies.php">Family</a></li>
+										<li><a href="movies.php">Thriller</a></li>
+										<li><a href="movies.php">Commedy</a></li>
+										<li><a href="movies.php">Romantic</a></li>
+										<li><a href="movies.php">Tv-Series</a></li>
+										<li><a href="movies.php">Horror</a></li>
+									</ul>
+								</div>
+							</div>
+							<a class="close" href="#close">×</a>
+						</div>
+					</div>		
 
-					<div class="Login_SignUp" id="login"
-						style="font-size: 2rem ; display: inline-block; position: relative;">
-						
-						<a class="nav-link" href="sign_in.html"><i class="fa fa-user-circle-o"></i></a>
-						
-					</div>
+					<div>	
+    <?php if (isset($_SESSION["username"])) {
+        // If username is set in the session, the user is logged in
+        echo '<a href="logout.php" class="btn btn-dark search-hny mr-lg-3 mt-lg-0 mt-4" title="Logout">Log out</a>';
+    } else {
+        // If username is not set in the session, the user is not logged in
+        echo '<div class="Login_SignUp" id="login" style="font-size: 2rem; display: inline-block; position: relative;">
+                <a class="nav-link" href="sign_in.php"><i class="fa fa-user-circle-o"></i></a>
+            </div>';
+    } ?>
+</div>
+
 				</div>
+				
 				<div class="mobile-position">
 					<nav class="navigation">
 						<div class="theme-switch-wrapper">
@@ -68,14 +109,17 @@
 						</div>
 					</nav>
 				</div>
+				<?php if (isset($_SESSION["username"])) {
+        echo "<p>Hey, " . $_SESSION["username"] . "!</p>";
+    } ?>
+
 			</div>
 		</nav>
 	</header>
-	
 	<div class="w3l-breadcrumbs">
 		<nav id="breadcrumbs" class="breadcrumbs">
 			<div class="container page-wrapper">
-				<a href="index.html">Home</a> » <span class="breadcrumb_last" aria-current="page">About</span>
+				<a href="index.php">Home</a> » <span class="breadcrumb_last" aria-current="page">About</span>
 			</div>
 		</nav>
 	</div>
@@ -320,19 +364,19 @@
 						<div class="right-side">
 							<div class="row footer-about">
 								<div class="col-md-3 col-6 footer-img mb-lg-0 mb-4">
-									<a href="movies.html"><img class="img-fluid" src="assets/images/banner1.jpg"
+									<a href="movies.php"><img class="img-fluid" src="assets/images/banner1.jpg"
 											alt=""></a>
 								</div>
 								<div class="col-md-3 col-6 footer-img mb-lg-0 mb-4">
-									<a href="movies.html"><img class="img-fluid" src="assets/images/banner2.jpg"
+									<a href="movies.php"><img class="img-fluid" src="assets/images/banner2.jpg"
 											alt=""></a>
 								</div>
 								<div class="col-md-3 col-6 footer-img mb-lg-0 mb-4">
-									<a href="movies.html"><img class="img-fluid" src="assets/images/banner3.jpg"
+									<a href="movies.php"><img class="img-fluid" src="assets/images/banner3.jpg"
 											alt=""></a>
 								</div>
 								<div class="col-md-3 col-6 footer-img mb-lg-0 mb-4">
-									<a href="movies.html"><img class="img-fluid" src="assets/images/banner4.jpg"
+									<a href="movies.php"><img class="img-fluid" src="assets/images/banner4.jpg"
 											alt=""></a>
 								</div>
 							</div>
@@ -347,29 +391,29 @@
 										<li><a href="#">English Movies</a></li>
 										<li><a href="#">Tailor</a></li>
 										<li><a href="#">Upcoming Movies</a></li>
-										<li><a href="Contact_Us.html">Contact Us</a></li>
+										<li><a href="Contact_Us.php">Contact Us</a></li>
 									</ul>
 								</div>
 								<div class="col-md-3 col-sm-6 sub-two-right mt-5">
 									<h6>Information</h6>
 									<ul>
-										<li><a href="index.html">Home</a> </li>
-										<li><a href="about.html">About</a> </li>
+										<li><a href="index.php">Home</a> </li>
+										<li><a href="about.php">About</a> </li>
 										<li><a href="#">Tv Series</a> </li>
 										<li><a href="#">Blogs</a> </li>
-										<li><a href="sign_in.html">Login</a></li>
-										<li><a href="Contact_Us.html">Contact</a></li>
+										<li><a href="sign_in.php">Login</a></li>
+										<li><a href="Contact_Us.php">Contact</a></li>
 									</ul>
 								</div>
 								<div class="col-md-3 col-sm-6 sub-two-right mt-5">
 									<h6>Locations</h6>
 									<ul>
-										<li><a href="movies.html">Asia</a></li>
-										<li><a href="movies.html">France</a></li>
-										<li><a href="movies.html">Taiwan</a></li>
-										<li><a href="movies.html">United States</a></li>
-										<li><a href="movies.html">Korea</a></li>
-										<li><a href="movies.html">United Kingdom</a></li>
+										<li><a href="movies.php">Asia</a></li>
+										<li><a href="movies.php">France</a></li>
+										<li><a href="movies.php">Taiwan</a></li>
+										<li><a href="movies.php">United States</a></li>
+										<li><a href="movies.php">Korea</a></li>
+										<li><a href="movies.php">United Kingdom</a></li>
 									</ul>
 								</div>
 								<div class="col-md-3 col-sm-6 sub-two-right mt-5">
