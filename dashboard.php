@@ -1,3 +1,6 @@
+<?php
+session_start(); ?>
+
 <!doctype html>
 <html lang="zxx">
 
@@ -16,31 +19,29 @@
 	<header id="site-header" class="w3l-header fixed-top">
 		<nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-3">
 			<div class="container">
-				<h1><a class="navbar-brand" href="index.html"><span class="fa fa-play icon-log"aria-hidden="true"></span>Myflex</a></h1>
+				<h1><a class="navbar-brand" href="dashboard.php"><span class="fa fa-play icon-log"aria-hidden="true"></span>Myflex</a></h1>
 				<button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
 					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
 					aria-label="Toggle navigation">
 					<span class="fa icon-expand fa-bars"></span>
 					<span class="fa icon-close fa-times"></span>
 				</button>
-
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item active">
-							<a class="nav-link" href="index.html">Home</a>
+							<a class="nav-link" href="dashboard.php">Home</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="movies.html">Movies</a>
+							<a class="nav-link" href="movies.php">Movies</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="about.html">About</a>
+							<a class="nav-link" href="about.php">About</a>
 						</li>
 
 						<li class="nav-item">
-							<a class="nav-link" href="Contact_Us.html">Contact</a>
+							<a class="nav-link" href="Contact_Us.php">Contact</a>
 						</li>
 					</ul>
-
 					<div class="search-right">
 						<a href="#search" class="btn search-hny mr-lg-3 mt-lg-0 mt-4" title="search">Search <span class="fa fa-search ml-3" aria-hidden="true"></span></a>
 						
@@ -54,33 +55,41 @@
 								<div class="browse-items">
 									<h3 class="hny-title two mt-md-5 mt-4">Browse all:</h3>
 									<ul class="search-items">
-										<li><a href="movies.html">Action</a></li>
-										<li><a href="movies.html">Drama</a></li>
-										<li><a href="movies.html">Family</a></li>
-										<li><a href="movies.html">Thriller</a></li>
-										<li><a href="movies.html">Commedy</a></li>
-										<li><a href="movies.html">Romantic</a></li>
-										<li><a href="movies.html">Tv-Series</a></li>
-										<li><a href="movies.html">Horror</a></li>
-										<li><a href="movies.html">Action</a></li>
-										<li><a href="movies.html">Drama</a></li>
-										<li><a href="movies.html">Family</a></li>
-										<li><a href="movies.html">Thriller</a></li>
-										<li><a href="movies.html">Commedy</a></li>
-										<li><a href="movies.html">Romantic</a></li>
-										<li><a href="movies.html">Tv-Series</a></li>
-										<li><a href="movies.html">Horror</a></li>
+										<li><a href="movies.php">Action</a></li>
+										<li><a href="movies.php">Drama</a></li>
+										<li><a href="movies.php">Family</a></li>
+										<li><a href="movies.php">Thriller</a></li>
+										<li><a href="movies.php">Commedy</a></li>
+										<li><a href="movies.php">Romantic</a></li>
+										<li><a href="movies.php">Tv-Series</a></li>
+										<li><a href="movies.php">Horror</a></li>
+										<li><a href="movies.php">Action</a></li>
+										<li><a href="movies.php">Drama</a></li>
+										<li><a href="movies.php">Family</a></li>
+										<li><a href="movies.php">Thriller</a></li>
+										<li><a href="movies.php">Commedy</a></li>
+										<li><a href="movies.php">Romantic</a></li>
+										<li><a href="movies.php">Tv-Series</a></li>
+										<li><a href="movies.php">Horror</a></li>
 									</ul>
 								</div>
 							</div>
 							<a class="close" href="#close">×</a>
 						</div>
+					</div>		
 
-					</div>
-					<div class="Login_SignUp" id="login"
-						style="font-size: 2rem ; display: inline-block; position: relative;">
-						<a class="nav-link" href="sign_in.html"><i class="fa fa-user-circle-o"></i></a>
-					</div>
+					<div>	
+    <?php if (isset($_SESSION["username"])) {
+        // If username is set in the session, the user is logged in
+        echo '<a href="logout.php" class="btn btn-dark search-hny mr-lg-3 mt-lg-0 mt-4" title="Logout">Log out</a>';
+    } else {
+        // If username is not set in the session, the user is not logged in
+        echo '<div class="Login_SignUp" id="login" style="font-size: 2rem; display: inline-block; position: relative;">
+                <a class="nav-link" href="sign_in.php"><i class="fa fa-user-circle-o"></i></a>
+            </div>';
+    } ?>
+</div>
+
 				</div>
 				
 				<div class="mobile-position">
@@ -96,6 +105,10 @@
 						</div>
 					</nav>
 				</div>
+				<?php if (isset($_SESSION["username"])) {
+        echo "<p>Hey, " . $_SESSION["username"] . "!</p>";
+    } ?>
+
 			</div>
 		</nav>
 	</header>
@@ -196,14 +209,14 @@
 							<h3 class="hny-title">Popular Movies</h3>
 						</div>
 						<div class="headerhny-right text-lg-right">
-							<h4><a class="show-title" href="movies.html">Show all</a></h4>
+							<h4><a class="show-title" href="movies.php">Show all</a></h4>
 						</div>
 					</div>
 				</div>
 				<div class="w3l-populohny-grids">
 					<div class="item vhny-grid">
 						<div class="box16">
-							<a href="movies.html">
+							<a href="movies.php">
 								<figure>
 									<img class="img-fluid" src="assets/images/ER.jpg" alt="">
 								</figure>
@@ -222,7 +235,7 @@
 					</div>
 					<div class="item vhny-grid">
 						<div class="box16">
-							<a href="movies.html">
+							<a href="movies.php">
 								<figure>
 									<img class="img-fluid" src="assets/images/m6.jpg" alt="">
 								</figure>
@@ -241,7 +254,7 @@
 					</div>
 					<div class="item vhny-grid">
 						<div class="box16">
-							<a href="movies.html">
+							<a href="movies.php">
 								<figure>
 									<img class="img-fluid" src="assets/images/mr.jpg" alt="">
 								</figure>
@@ -260,7 +273,7 @@
 					</div>
 					<div class="item vhny-grid">
 						<div class="box16">
-							<a href="movies.html">
+							<a href="movies.php">
 								<figure>
 									<img class="img-fluid" src="assets/images/avtar-2.jpeg" alt="">
 								</figure>
@@ -290,14 +303,14 @@
 							<h3 class="hny-title">New Releases</h3>
 						</div>
 						<div class="headerhny-right text-lg-right">
-							<h4><a class="show-title" href="movies.html">Show all</a></h4>
+							<h4><a class="show-title" href="movies.php">Show all</a></h4>
 						</div>
 					</div>
 				</div>
 				<div class="owl-three owl-carousel owl-theme">
 					<div class="item vhny-grid">
 						<div class="box16 mb-0">
-							<a href="movies.html">
+							<a href="movies.php">
 								<figure>
 									<img class="img-fluid" src="assets/images/n1.jpg" alt="">
 								</figure>
@@ -312,16 +325,16 @@
 								<span class="fa fa-play video-icon" aria-hidden="true"></span>
 							</a>
 						</div>
-						<h3> <a class="title-gd" href="movies.html">No Time to Die</a></h3>
+						<h3> <a class="title-gd" href="movies.php">No Time to Die</a></h3>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
 						<div class="button-center text-center mt-4">
-							<a href="movies.html" class="btn watch-button">Watch now</a>
+							<a href="movies.php" class="btn watch-button">Watch now</a>
 						</div>
 
 					</div>
 					<div class="item vhny-grid">
 						<div class="box16 mb-0">
-							<a href="movies.html">
+							<a href="movies.php">
 								<figure>
 									<img class="img-fluid" src="assets/images/n2.jpg" alt="">
 								</figure>
@@ -337,15 +350,15 @@
 								<span class="fa fa-play video-icon" aria-hidden="true"></span>
 							</a>
 						</div>
-						<h3> <a class="title-gd" href="movies.html">Mulan</a></h3>
+						<h3> <a class="title-gd" href="movies.php">Mulan</a></h3>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
 						<div class="button-center text-center mt-4">
-							<a href="movies.html" class="btn watch-button">Watch now</a>
+							<a href="movies.php" class="btn watch-button">Watch now</a>
 						</div>
 					</div>
 					<div class="item vhny-grid">
 						<div class="box16 mb-0">
-							<a href="movies.html">
+							<a href="movies.php">
 								<figure>
 									<img class="img-fluid" src="assets/images/n3.jpg" alt="">
 								</figure>
@@ -361,15 +374,15 @@
 								<span class="fa fa-play video-icon" aria-hidden="true"></span>
 							</a>
 						</div>
-						<h3> <a class="title-gd" href="movies.html">Free Guy</a></h3>
+						<h3> <a class="title-gd" href="movies.php">Free Guy</a></h3>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
 						<div class="button-center text-center mt-4">
-							<a href="movies.html" class="btn watch-button">Watch now</a>
+							<a href="movies.php" class="btn watch-button">Watch now</a>
 						</div>
 					</div>
 					<div class="item vhny-grid">
 						<div class="box16 mb-0">
-							<a href="movies.html">
+							<a href="movies.php">
 								<figure>
 									<img class="img-fluid" src="assets/images/n4.jpg" alt="">
 								</figure>
@@ -385,16 +398,16 @@
 								<span class="fa fa-play video-icon" aria-hidden="true"></span>
 							</a>
 						</div>
-						<h3> <a class="title-gd" href="movies.html">My Spy</a></h3>
+						<h3> <a class="title-gd" href="movies.php">My Spy</a></h3>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
 						<div class="button-center text-center mt-4">
-							<a href="movies.html" class="btn watch-button">Watch now</a>
+							<a href="movies.php" class="btn watch-button">Watch now</a>
 						</div>
 
 					</div>
 					<div class="item vhny-grid">
 						<div class="box16 mb-0">
-							<a href="movies.html">
+							<a href="movies.php">
 								<figure>
 									<img class="img-fluid" src="assets/images/n5.jpg" alt="">
 								</figure>
@@ -410,15 +423,15 @@
 								<span class="fa fa-play video-icon" aria-hidden="true"></span>
 							</a>
 						</div>
-						<h3> <a class="title-gd" href="movies.html">Scoob</a></h3>
+						<h3> <a class="title-gd" href="movies.php">Scoob</a></h3>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
 						<div class="button-center text-center mt-4">
-							<a href="movies.html" class="btn watch-button">Watch now</a>
+							<a href="movies.php" class="btn watch-button">Watch now</a>
 						</div>
 					</div>
 					<div class="item vhny-grid">
 						<div class="box16 mb-0">
-							<a href="movies.html">
+							<a href="movies.php">
 								<figure>
 									<img class="img-fluid" src="assets/images/n6.jpg" alt="">
 								</figure>
@@ -434,10 +447,10 @@
 								<span class="fa fa-play video-icon" aria-hidden="true"></span>
 							</a>
 						</div>
-						<h3> <a class="title-gd" href="movies.html">Downhill</a></h3>
+						<h3> <a class="title-gd" href="movies.php">Downhill</a></h3>
 						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
 						<div class="button-center text-center mt-4">
-							<a href="movies.html" class="btn watch-button">Watch now</a>
+							<a href="movies.php" class="btn watch-button">Watch now</a>
 						</div>
 					</div>
 				</div>
@@ -456,7 +469,7 @@
 									<span class="sub-text">Comedy</span>
 									<h3>Jumanji: The Next Level</h3>
 									<p>2019 ‧ Comedy/Action ‧ 2h 3m</p>
-									<a class="watch" href="movies.html"><span class="fa fa-play"
+									<a class="watch" href="movies.php"><span class="fa fa-play"
 											aria-hidden="true"></span>
 										Watch Trailer</a>
 								</div>
@@ -472,7 +485,7 @@
 									<span class="sub-text">Adventure</span>
 									<h3>Dolittle</h3>
 									<p>2020 ‧ Family/Adventure ‧ 1h 41m</p>
-									<a class="watch" href="movies.html"><span class="fa fa-play"
+									<a class="watch" href="movies.php"><span class="fa fa-play"
 											aria-hidden="true"></span>
 										Watch Trailer</a>
 								</div>
@@ -488,7 +501,7 @@
 									<span class="sub-text">Action</span>
 									<h3>Bad Boys for Life</h3>
 									<p>2020 ‧ Comedy/Action ‧ 2h 4m</p>
-									<a class="watch" href="movies.html"><span class="fa fa-play"
+									<a class="watch" href="movies.php"><span class="fa fa-play"
 											aria-hidden="true"></span>
 										Watch Trailer</a>
 								</div>
@@ -507,19 +520,19 @@
 						<div class="right-side">
 							<div class="row footer-about">
 								<div class="col-md-3 col-6 footer-img mb-lg-0 mb-4">
-									<a href="movies.html"><img class="img-fluid" src="assets/images/banner1.jpg"
+									<a href="movies.php"><img class="img-fluid" src="assets/images/banner1.jpg"
 											alt=""></a>
 								</div>
 								<div class="col-md-3 col-6 footer-img mb-lg-0 mb-4">
-									<a href="movies.html"><img class="img-fluid" src="assets/images/banner2.jpg"
+									<a href="movies.php"><img class="img-fluid" src="assets/images/banner2.jpg"
 											alt=""></a>
 								</div>
 								<div class="col-md-3 col-6 footer-img mb-lg-0 mb-4">
-									<a href="movies.html"><img class="img-fluid" src="assets/images/banner3.jpg"
+									<a href="movies.php"><img class="img-fluid" src="assets/images/banner3.jpg"
 											alt=""></a>
 								</div>
 								<div class="col-md-3 col-6 footer-img mb-lg-0 mb-4">
-									<a href="movies.html"><img class="img-fluid" src="assets/images/banner4.jpg"
+									<a href="movies.php"><img class="img-fluid" src="assets/images/banner4.jpg"
 											alt=""></a>
 								</div>
 							</div>
@@ -534,29 +547,29 @@
 										<li><a href="#">English Movies</a></li>
 										<li><a href="#">Tailor</a></li>
 										<li><a href="#">Upcoming Movies</a></li>
-										<li><a href="Contact_Us.html">Contact Us</a></li>
+										<li><a href="Contact_Us.php">Contact Us</a></li>
 									</ul>
 								</div>
 								<div class="col-md-3 col-sm-6 sub-two-right mt-5">
 									<h6>Information</h6>
 									<ul>
-										<li><a href="index.html">Home</a> </li>
-										<li><a href="about.html">About</a> </li>
+										<li><a href="index.php">Home</a> </li>
+										<li><a href="about.php">About</a> </li>
 										<li><a href="#">Tv Series</a> </li>
 										<li><a href="#">Blogs</a> </li>
-										<li><a href="sign_in.html">Login</a></li>
-										<li><a href="Contact_Us.html">Contact</a></li>
+										<li><a href="sign_in.php">Login</a></li>
+										<li><a href="Contact_Us.php">Contact</a></li>
 									</ul>
 								</div>
 								<div class="col-md-3 col-sm-6 sub-two-right mt-5">
 									<h6>Locations</h6>
 									<ul>
-										<li><a href="movies.html">Asia</a></li>
-										<li><a href="movies.html">France</a></li>
-										<li><a href="movies.html">Taiwan</a></li>
-										<li><a href="movies.html">United States</a></li>
-										<li><a href="movies.html">Korea</a></li>
-										<li><a href="movies.html">United Kingdom</a></li>
+										<li><a href="movies.php">Asia</a></li>
+										<li><a href="movies.php">France</a></li>
+										<li><a href="movies.php">Taiwan</a></li>
+										<li><a href="movies.php">United States</a></li>
+										<li><a href="movies.php">Korea</a></li>
+										<li><a href="movies.php">United Kingdom</a></li>
 									</ul>
 								</div>
 								<div class="col-md-3 col-sm-6 sub-two-right mt-5">
@@ -812,6 +825,9 @@
 			}
 		});
 	});
+	/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+
 </script>
 
 <script src="assets/js/bootstrap.min.js"></script>
