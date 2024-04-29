@@ -9,28 +9,25 @@ session_start(); ?>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>Movies</title>
 	<link rel="stylesheet" href="assets/css/style-starter.css">
-	<link href="//fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,600&display=swap"
-		rel="stylesheet">
-	
+	<link href="//fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;1,600&display=swap" rel="stylesheet">
+
 </head>
 
 <body>
-<header id="site-header" class="w3l-header fixed-top">
+	<header id="site-header" class="w3l-header fixed-top">
 		<nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-3">
 			<div class="container">
-				<h1><a class="navbar-brand" href="dashboard.php"><span class="fa fa-play icon-log"aria-hidden="true"></span>Myflex</a></h1>
-				<button class="navbar-toggler collapsed" type="button" data-toggle="collapse"
-					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-					aria-label="Toggle navigation">
+				<h1><a class="navbar-brand" href="dashboard.php"><span class="fa fa-play icon-log" aria-hidden="true"></span>Myflex</a></h1>
+				<button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="fa icon-expand fa-bars"></span>
 					<span class="fa icon-close fa-times"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ml-auto">
-						<li class="nav-item active">
+						<li class="nav-item">
 							<a class="nav-link" href="dashboard.php">Home</a>
 						</li>
-						<li class="nav-item">
+						<li class="nav-item active">
 							<a class="nav-link" href="movies.php">Movies</a>
 						</li>
 						<li class="nav-item">
@@ -43,13 +40,12 @@ session_start(); ?>
 					</ul>
 					<div class="search-right">
 						<a href="#search" class="btn search-hny mr-lg-3 mt-lg-0 mt-4" title="search">Search <span class="fa fa-search ml-3" aria-hidden="true"></span></a>
-						
+
 						<div id="search" class="pop-overlay">
 							<div class="popup">
 								<form action="#" method="post" class="search-box">
 									<input type="search" placeholder="Search your Keyword" name="search" style="color:black" required="required" autofocus="">
-									<button type="submit" class="btn"><span class="fa fa-search"
-											aria-hidden="true"></span></button>
+									<button type="submit" class="btn"><span class="fa fa-search" aria-hidden="true"></span></button>
 								</form>
 								<div class="browse-items">
 									<h3 class="hny-title two mt-md-5 mt-4">Browse all:</h3>
@@ -75,22 +71,22 @@ session_start(); ?>
 							</div>
 							<a class="close" href="#close">×</a>
 						</div>
-					</div>		
+					</div>
 
-					<div>	
-    <?php if (isset($_SESSION["username"])) {
-        // If username is set in the session, the user is logged in
-        echo '<a href="logout.php" class="btn btn-dark search-hny mr-lg-3 mt-lg-0 mt-4" title="Logout">Log out</a>';
-    } else {
-        // If username is not set in the session, the user is not logged in
-        echo '<div class="Login_SignUp" id="login" style="font-size: 2rem; display: inline-block; position: relative;">
+					<div>
+						<?php if (isset($_SESSION["username"])) {
+							// If username is set in the session, the user is logged in
+							echo '<a href="logout.php" class="btn btn-dark search-hny mr-lg-3 mt-lg-0 mt-4" title="Logout">Log out</a>';
+						} else {
+							// If username is not set in the session, the user is not logged in
+							echo '<div class="Login_SignUp" id="login" style="font-size: 2rem; display: inline-block; position: relative;">
                 <a class="nav-link" href="sign_in.php"><i class="fa fa-user-circle-o"></i></a>
             </div>';
-    } ?>
-</div>
+						} ?>
+					</div>
 
 				</div>
-				
+
 				<div class="mobile-position">
 					<nav class="navigation">
 						<div class="theme-switch-wrapper">
@@ -105,13 +101,13 @@ session_start(); ?>
 					</nav>
 				</div>
 				<?php if (isset($_SESSION["username"])) {
-        echo "<p>Hey, " . $_SESSION["username"] . "!</p>";
-    } ?>
+					echo "<p>Hey, " . $_SESSION["username"] . "!</p>";
+				} ?>
 
 			</div>
 		</nav>
 	</header>
-	
+
 	<div class="w3l-breadcrumbs">
 		<nav id="breadcrumbs" class="breadcrumbs">
 			<div class="container page-wrapper">
@@ -216,42 +212,44 @@ session_start(); ?>
 					<div class="item vhny-grid">
 						<div class="box16 mb-0">
 							<figure>
-								
+
 								<img class="img-fluid" src="assets/images/FTF.jpg" alt="">
 							</figure>
 							<a href=".Commando3" data-toggle="modal">
 								<div class="box-content">
 									<h3 class="title">Fast and Furious</h3>
 									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 40min
-										<span class="post fa fa-heart text-right"></span>
+											<span class="post fa fa-heart text-right"></span>
 									</h4>
 								</div>
 							</a>
-							<div class="modal fade FTF" id="myModal" tabindex="-1" role="dialog"
-								aria-hidden="true">
+							<div class="modal fade FTF" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
 								<div class="modal-dialog" role="document">
 									<div class="modal-content" id="mymodalcontent">
 										<div class="modal-header">
 											<h4 class="modal-title" id="exampleModalLongTitle">DETAILS</h4>
-											<button type="button" class="closebtn" data-dismiss="modal"
-												aria-label="Close">
+											<button type="button" class="closebtn" data-dismiss="modal" aria-label="Close">
 												<span aria-hidden="true">&times;</span>
 											</button>
 										</div>
 										<div class="modal-body" id="dynamic-content">
-											
+
 											<p>
-												<h3>Release Date&nbsp;:September 25, 2001</h3>
-												<h3>Venue&nbsp;:The Fast and the Furious </h3>
+											<h3>Release Date&nbsp;:September 25, 2001</h3>
+											<h3>Venue&nbsp;:The Fast and the Furious </h3>
 											</p>
 											<h4>About Movie</h4>
 											<p>
-												Dominic Toretto (Vin Diesel) enjoys the adrenaline of street car 
-												racing and his fans treat him like a rock star. 
-												After a blazing encounter with the ruthless Johnny Tran, Dom decides to take Brian (Paul Walker), 
-												a newcomer to street racing, under his wing. Dom's sister Mia sees something she likes in Brian, too. 
-												Trouble is, neither of them realize he's an undercover cop, and Dominic and his rival 
-												Johnny Tran are both the prime suspects in a case involving dirty money and big-rig hijacking.
+												Dominic Toretto (Vin Diesel) enjoys the adrenaline of street car
+												racing and his fans treat him like a rock star.
+												After a blazing encounter with the ruthless Johnny Tran, Dom decides to
+												take Brian (Paul Walker),
+												a newcomer to street racing, under his wing. Dom's sister Mia sees
+												something she likes in Brian, too.
+												Trouble is, neither of them realize he's an undercover cop, and Dominic
+												and his rival
+												Johnny Tran are both the prime suspects in a case involving dirty money
+												and big-rig hijacking.
 											</p>
 											<h4>Star Cast</h4>
 											<p>
@@ -262,8 +260,7 @@ session_start(); ?>
 											</p>
 										</div>
 										<div class="bookbtn">
-											<button type="button" class="btn btn-success"
-												onclick="location.href='ticket-booking.php';">Book</button>
+											<button type="button" class="btn btn-success" onclick="location.href='ticket-booking.php'">Book</button>
 										</div>
 									</div>
 								</div>
@@ -286,22 +283,20 @@ session_start(); ?>
 									</h4>
 								</div>
 							</a>
-							<div class="modal fade Knivesout" id="myModal" tabindex="-1" role="dialog"
-								aria-hidden="true">
+							<div class="modal fade Knivesout" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
 								<div class="modal-dialog" role="document">
 									<div class="modal-content" id="mymodalcontent">
 										<div class="modal-header">
 											<h4 class="modal-title" id="exampleModalLongTitle">DETAILS</h4>
-											<button type="button" class="closebtn" data-dismiss="modal"
-												aria-label="Close">
+											<button type="button" class="closebtn" data-dismiss="modal" aria-label="Close">
 												<span aria-hidden="true">&times;</span>
 											</button>
 										</div>
 										<div class="modal-body" id="dynamic-content">
 											<img src="assets/images/m3.jpg" class="img-fluid modalimg" alt="" />
 											<p>
-												<h3>Release Date&nbsp;:September 7, 2019 </h3>
-												<h3>Venue&nbsp;:Cg Road </h3>
+											<h3>Release Date&nbsp;:September 7, 2019 </h3>
+											<h3>Venue&nbsp;:Cg Road </h3>
 											</p>
 											<h4>About Movie</h4>
 											<p>
@@ -323,8 +318,7 @@ session_start(); ?>
 											</p>
 										</div>
 										<div class="bookbtn">
-											<button type="button" class="btn btn-success"
-												onclick="location.href='ticket-booking.php';">Book</button>
+											<button type="button" class="btn btn-success" onclick="location.href='ticket-booking.php';">Book</button>
 										</div>
 									</div>
 								</div>
@@ -352,24 +346,26 @@ session_start(); ?>
 									<div class="modal-content" id="mymodalcontent">
 										<div class="modal-header">
 											<h4 class="modal-title" id="exampleModalLongTitle">DETAILS</h4>
-											<button type="button" class="closebtn" data-dismiss="modal"
-												aria-label="Close">
+											<button type="button" class="closebtn" data-dismiss="modal" aria-label="Close">
 												<span aria-hidden="true">&times;</span>
 											</button>
 										</div>
 										<div class="modal-body" id="dynamic-content">
 											<img src="assets/images/KFP.jpg" class="img-fluid modalimg" alt="" />
 											<p>
-												<h3>Release Date&nbsp;:5 June 2019 </h3>
-												<h3>Venue&nbsp;:Cg Road </h3>
+											<h3>Release Date&nbsp;:5 June 2019 </h3>
+											<h3>Venue&nbsp;:Cg Road </h3>
 											</p>
 											<h4>About Movie</h4>
 											<p>
-												Po might just be the laziest, clumsiest panda in the Valley of Peace, but he secretly dreams of becoming a kung fu legend. 
-												When the villainous snow leopard Tai Lung threatens Po's homeland, 
-												the hapless panda is chosen to fulfil an ancient prophecy and defend the Valley from attack. 
-												Training under Master Shifu, Po embarks on an epic 
-												high-kicking adventure as he sets out to thwart Tai Lung's evil plans. A DreamWorks animation.
+												Po might just be the laziest, clumsiest panda in the Valley of Peace,
+												but he secretly dreams of becoming a kung fu legend.
+												When the villainous snow leopard Tai Lung threatens Po's homeland,
+												the hapless panda is chosen to fulfil an ancient prophecy and defend the
+												Valley from attack.
+												Training under Master Shifu, Po embarks on an epic
+												high-kicking adventure as he sets out to thwart Tai Lung's evil plans. A
+												DreamWorks animation.
 											</p>
 											<h4>Star Cast</h4>
 											<p>
@@ -381,8 +377,7 @@ session_start(); ?>
 											</p>
 										</div>
 										<div class="bookbtn">
-											<button type="button" class="btn btn-success"
-												onclick="location.href='ticket-booking.php';">Book</button>
+											<button type="button" class="btn btn-success" onclick="location.href='ticket-booking.php';">Book</button>
 										</div>
 									</div>
 								</div>
@@ -405,22 +400,21 @@ session_start(); ?>
 									</h4>
 								</div>
 							</a>
-							
+
 							<div class="modal fade Jumanji" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
 								<div class="modal-dialog" role="document">
 									<div class="modal-content" id="mymodalcontent">
 										<div class="modal-header">
 											<h4 class="modal-title" id="exampleModalLongTitle">DETAILS</h4>
-											<button type="button" class="closebtn" data-dismiss="modal"
-												aria-label="Close">
+											<button type="button" class="closebtn" data-dismiss="modal" aria-label="Close">
 												<span aria-hidden="true">&times;</span>
 											</button>
 										</div>
 										<div class="modal-body" id="dynamic-content">
 											<img src="assets/images/m5.jpg" class="img-fluid modalimg" alt="" />
 											<p>
-												<h3>Release Date&nbsp;:December 13, 2019 </h3>
-												<h3>Venue&nbsp;:Cg Road </h3>
+											<h3>Release Date&nbsp;:December 13, 2019 </h3>
+											<h3>Venue&nbsp;:Cg Road </h3>
 											</p>
 											<h4>About Movie</h4>
 											<p>
@@ -449,8 +443,7 @@ session_start(); ?>
 											</p>
 										</div>
 										<div class="bookbtn">
-											<button type="button" class="btn btn-success"
-												onclick="location.href='ticket-booking.php';">Book</button>
+											<button type="button" class="btn btn-success" onclick="location.href='ticket-booking.php';">Book</button>
 										</div>
 									</div>
 								</div>
@@ -483,29 +476,28 @@ session_start(); ?>
 									</h4>
 								</div>
 							</a>
-							<div class="modal fade Rocketman" id="myModal" tabindex="-1" role="dialog"
-								aria-hidden="true">
+							<div class="modal fade Rocketman" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
 								<div class="modal-dialog" role="document">
 									<div class="modal-content" id="mymodalcontent">
 										<div class="modal-header">
 											<h4 class="modal-title" id="exampleModalLongTitle">DETAILS</h4>
-											<button type="button" class="closebtn" data-dismiss="modal"
-												aria-label="Close">
+											<button type="button" class="closebtn" data-dismiss="modal" aria-label="Close">
 												<span aria-hidden="true">&times;</span>
 											</button>
 										</div>
 										<div class="modal-body" id="dynamic-content">
 											<img src="assets/images/AP.jpg" class="img-fluid modalimg" alt="" />
 											<p>
-												<h3>Release Date&nbsp;:August 25, 1999 </h3>
-												<h3>Venue&nbsp;:East Grand Rapids </h3>
+											<h3>Release Date&nbsp;:August 25, 1999 </h3>
+											<h3>Venue&nbsp;:East Grand Rapids </h3>
 											</p>
 											<h4>About Movie</h4>
 											<p>
-												A riotous and raunchy exploration of the most eagerly anticipated 
-												and most humiliating rite of adulthood, known as losing one's virginity. 
-												In this hilarious lesson in life, love and libido, a group of friends, 
-												fed up with their well-deserved reputations as sexual no-hitters, decide to take action.
+												A riotous and raunchy exploration of the most eagerly anticipated
+												and most humiliating rite of adulthood, known as losing one's virginity.
+												In this hilarious lesson in life, love and libido, a group of friends,
+												fed up with their well-deserved reputations as sexual no-hitters, decide
+												to take action.
 											</p>
 											<h4>Star Cast</h4>
 											<p>
@@ -513,18 +505,17 @@ session_start(); ?>
 												Sean William Scott as Steve<br />
 												Alyson Hannigan as Michelle<br />
 												Chris Klein as Chris<br />
-												
+
 											</p>
 										</div>
 										<div class="bookbtn">
-											
-											<button type="button" class="btn btn-success"
-												onclick="location.href='ticket-booking.php';">Book</button>
+
+											<button type="button" class="btn btn-success" onclick="location.href='ticket-booking.php';">Book</button>
 										</div>
 									</div>
 								</div>
 							</div>
-							
+
 
 						</div>
 					</div>
@@ -545,23 +536,21 @@ session_start(); ?>
 									</h4>
 								</div>
 							</a>
-							
-							<div class="modal fade Doctorsleep" id="myModal" tabindex="-1" role="dialog"
-								aria-hidden="true">
+
+							<div class="modal fade Doctorsleep" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
 								<div class="modal-dialog" role="document">
 									<div class="modal-content" id="mymodalcontent">
 										<div class="modal-header">
 											<h4 class="modal-title" id="exampleModalLongTitle">DETAILS</h4>
-											<button type="button" class="closebtn" data-dismiss="modal"
-												aria-label="Close">
+											<button type="button" class="closebtn" data-dismiss="modal" aria-label="Close">
 												<span aria-hidden="true">&times;</span>
 											</button>
 										</div>
 										<div class="modal-body" id="dynamic-content">
 											<img src="assets/images/m2.jpg" class="img-fluid modalimg" alt="" />
 											<p>
-												<h3>Release Date&nbsp;:October 21, 2019 </h3>
-												<h3>Venue&nbsp;:Cg Road </h3>
+											<h3>Release Date&nbsp;:October 21, 2019 </h3>
+											<h3>Venue&nbsp;:Cg Road </h3>
 											</p>
 											<h4>About Movie</h4>
 											<p>
@@ -588,13 +577,12 @@ session_start(); ?>
 											</p>
 										</div>
 										<div class="bookbtn">
-											<button type="button" class="btn btn-success"
-												onclick="location.href='ticket-booking.php';">Book</button>
+											<button type="button" class="btn btn-success" onclick="location.href='ticket-booking.php';">Book</button>
 										</div>
 									</div>
 								</div>
 							</div>
-							
+
 
 						</div>
 					</div>
@@ -614,30 +602,34 @@ session_start(); ?>
 									</h4>
 								</div>
 							</a>
-							
+
 							<div class="modal fade kabir" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
 								<div class="modal-dialog" role="document">
 									<div class="modal-content" id="mymodalcontent">
 										<div class="modal-header">
 											<h4 class="modal-title" id="exampleModalLongTitle">DETAILS</h4>
-											<button type="button" class="closebtn" data-dismiss="modal"
-												aria-label="Close">
+											<button type="button" class="closebtn" data-dismiss="modal" aria-label="Close">
 												<span aria-hidden="true">&times;</span>
 											</button>
 										</div>
 										<div class="modal-body" id="dynamic-content">
 											<img src="assets/images/mr.jpg" class="img-fluid modalimg" alt="" />
 											<p>
-												<h3>Release Date&nbsp;:September 17, 2014 </h3>
-												<h3>Venue&nbsp;:Louisiana </h3>
+											<h3>Release Date&nbsp;:September 17, 2014 </h3>
+											<h3>Venue&nbsp;:Louisiana </h3>
 											</p>
 											<h4>About Movie</h4>
 											<p>
-												Thomas (Dylan O'Brien), a teenager, arrives in a glade at the center of a giant labyrinth. 
-												Like the other youths dumped there before him, he has no memory of his previous life. 
-												Thomas quickly becomes part of the group and soon after demonstrates a unique 
-												perspective that scores him a promotion to Runner status those who patrol the always-changing maze to find an escape route. 
-												Together with Teresa (Kaya Scodelario), the only female, Thomas tries to convince his cohorts that he knows a way out.
+												Thomas (Dylan O'Brien), a teenager, arrives in a glade at the center of
+												a giant labyrinth.
+												Like the other youths dumped there before him, he has no memory of his
+												previous life.
+												Thomas quickly becomes part of the group and soon after demonstrates a
+												unique
+												perspective that scores him a promotion to Runner status those who
+												patrol the always-changing maze to find an escape route.
+												Together with Teresa (Kaya Scodelario), the only female, Thomas tries to
+												convince his cohorts that he knows a way out.
 											</p>
 											<h4>Star Cast</h4>
 											<p>
@@ -649,8 +641,7 @@ session_start(); ?>
 											</p>
 										</div>
 										<div class="bookbtn">
-											<button type="button" class="btn btn-success"
-												onclick="location.href='ticket-booking.php';">Book</button>
+											<button type="button" class="btn btn-success" onclick="location.href='ticket-booking.php';">Book</button>
 										</div>
 									</div>
 								</div>
@@ -678,16 +669,15 @@ session_start(); ?>
 									<div class="modal-content" id="mymodalcontent">
 										<div class="modal-header">
 											<h4 class="modal-title" id="exampleModalLongTitle">DETAILS</h4>
-											<button type="button" class="closebtn" data-dismiss="modal"
-												aria-label="Close">
+											<button type="button" class="closebtn" data-dismiss="modal" aria-label="Close">
 												<span aria-hidden="true">&times;</span>
 											</button>
 										</div>
 										<div class="modal-body" id="dynamic-content">
 											<img src="assets/images/m9.jpg" class="img-fluid modalimg" alt="" />
 											<p>
-												<h3>Release Date&nbsp;:October 4, 2019 </h3>
-												<h3>Venue&nbsp;:Cg Road </h3>
+											<h3>Release Date&nbsp;:October 4, 2019 </h3>
+											<h3>Venue&nbsp;:Cg Road </h3>
 											</p>
 											<h4>About Movie</h4>
 											<p>
@@ -713,8 +703,7 @@ session_start(); ?>
 											</p>
 										</div>
 										<div class="bookbtn">
-											<button type="button" class="btn btn-success"
-												onclick="location.href='ticket-booking.php';">Book</button>
+											<button type="button" class="btn btn-success" onclick="location.href='ticket-booking.php';">Book</button>
 										</div>
 									</div>
 								</div>
@@ -752,24 +741,27 @@ session_start(); ?>
 									<div class="modal-content" id="mymodalcontent">
 										<div class="modal-header">
 											<h4 class="modal-title" id="exampleModalLongTitle">DETAILS</h4>
-											<button type="button" class="closebtn" data-dismiss="modal"
-												aria-label="Close">
+											<button type="button" class="closebtn" data-dismiss="modal" aria-label="Close">
 												<span aria-hidden="true">&times;</span>
 											</button>
 										</div>
 										<div class="modal-body" id="dynamic-content">
 											<img src="assets/images/cars.jpg" class="img-fluid modalimg" alt="" />
 											<p>
-												<h3>Release Date&nbsp;:21 December 2007 </h3>
-												<h3>Venue&nbsp;:Cg Road </h3>
+											<h3>Release Date&nbsp;:21 December 2007 </h3>
+											<h3>Venue&nbsp;:Cg Road </h3>
 											</p>
 											<h4>About Movie</h4>
 											<p>
-												In a world where the towns are peopled with cars, and even the bugs are mini motors
-												a young ambitious racing car called Lightning McQueen is a star. 
-												On his way to an important event he has to stop in the little town of Radiator Springs after 
-												he accidentally damages the road and is forced to repair it. He finds living in a community oddly endearing, 
-												making true friends and beginning to realise there's more in life than winning. A Pixar animation.
+												In a world where the towns are peopled with cars, and even the bugs are
+												mini motors
+												a young ambitious racing car called Lightning McQueen is a star.
+												On his way to an important event he has to stop in the little town of
+												Radiator Springs after
+												he accidentally damages the road and is forced to repair it. He finds
+												living in a community oddly endearing,
+												making true friends and beginning to realise there's more in life than
+												winning. A Pixar animation.
 											</p>
 											<h4>Star Cast</h4>
 											<p>
@@ -780,8 +772,7 @@ session_start(); ?>
 											</p>
 										</div>
 										<div class="bookbtn">
-											<button type="button" class="btn btn-success"
-												onclick="location.href='ticket-booking.php';">Book</button>
+											<button type="button" class="btn btn-success" onclick="location.href='ticket-booking.php';">Book</button>
 										</div>
 									</div>
 								</div>
@@ -804,29 +795,31 @@ session_start(); ?>
 									</h4>
 								</div>
 							</a>
-							<div class="modal fade Chillarparty" id="myModal" tabindex="-1" role="dialog"
-								aria-hidden="true">
+							<div class="modal fade Chillarparty" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
 								<div class="modal-dialog" role="document">
 									<div class="modal-content" id="mymodalcontent">
 										<div class="modal-header">
 											<h4 class="modal-title" id="exampleModalLongTitle">DETAILS</h4>
-											<button type="button" class="closebtn" data-dismiss="modal"
-												aria-label="Close">
+											<button type="button" class="closebtn" data-dismiss="modal" aria-label="Close">
 												<span aria-hidden="true">&times;</span>
 											</button>
 										</div>
 										<div class="modal-body" id="dynamic-content">
 											<img src="assets/images/Dm.jpg" class="img-fluid modalimg" alt="" />
 											<p>
-												<h3>Release Date&nbsp;:November 30, 2016</h3>
-												<h3>Venue&nbsp;:Cg Road </h3>
+											<h3>Release Date&nbsp;:November 30, 2016</h3>
+											<h3>Venue&nbsp;:Cg Road </h3>
 											</p>
 											<h4>About Movie</h4>
 											<p>
-												An adventurous teenager sails out on a daring mission to save her people. 
-												During her journey, Moana meets the once-mighty demigod Maui, who guides her in her quest to become a master way-finder. 
-												Together they sail across the open ocean on an action-packed voyage, encountering enormous monsters and impossible odds. 
-												Along the way, Moana fulfills the ancient quest of her ancestors and discovers the one thing she always sought: her own identity.
+												An adventurous teenager sails out on a daring mission to save her
+												people.
+												During her journey, Moana meets the once-mighty demigod Maui, who guides
+												her in her quest to become a master way-finder.
+												Together they sail across the open ocean on an action-packed voyage,
+												encountering enormous monsters and impossible odds.
+												Along the way, Moana fulfills the ancient quest of her ancestors and
+												discovers the one thing she always sought: her own identity.
 											</p>
 											<h4>Star Cast</h4>
 											<p>
@@ -837,12 +830,11 @@ session_start(); ?>
 											</p>
 										</div>
 										<div class="bookbtn">
-											<button type="button" class="btn btn-success"
-												onclick="location.href='ticket-booking.php';">Book</button>
+											<button type="button" class="btn btn-success" onclick="location.href='ticket-booking.php';">Book</button>
 										</div>
 									</div>
 								</div>
-							</div>							
+							</div>
 						</div>
 					</div>
 					<div class="item vhny-grid">
@@ -861,29 +853,32 @@ session_start(); ?>
 									</h4>
 								</div>
 							</a>
-							
+
 							<div class="modal fade ganesha" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
 								<div class="modal-dialog" role="document">
 									<div class="modal-content" id="mymodalcontent">
 										<div class="modal-header">
 											<h4 class="modal-title" id="exampleModalLongTitle">DETAILS</h4>
-											<button type="button" class="closebtn" data-dismiss="modal"
-												aria-label="Close">
+											<button type="button" class="closebtn" data-dismiss="modal" aria-label="Close">
 												<span aria-hidden="true">&times;</span>
 											</button>
 										</div>
 										<div class="modal-body" id="dynamic-content">
 											<img src="assets/images/zoo.jpeg" class="img-fluid modalimg" alt="" />
 											<p>
-												<h3>Release Date&nbsp;:February 17, 2016 </h3>
-												<h3>Venue&nbsp;:Cg Road </h3>
+											<h3>Release Date&nbsp;:February 17, 2016 </h3>
+											<h3>Venue&nbsp;:Cg Road </h3>
 											</p>
 											<h4>About Movie</h4>
 											<p>
-												From the largest elephant to the smallest shrew, the city of Zootopia is a mammal metropolis where various animals live and thrive. 
-												When Judy Hopps (Ginnifer Goodwin) becomes the first rabbit to join the police force, 
-												she quickly learns how tough it is to enforce the law. Determined to prove herself, 
-												Judy jumps at the opportunity to solve a mysterious case. Unfortunately, that means working with Nick Wilde (Jason Bateman), 
+												From the largest elephant to the smallest shrew, the city of Zootopia is
+												a mammal metropolis where various animals live and thrive.
+												When Judy Hopps (Ginnifer Goodwin) becomes the first rabbit to join the
+												police force,
+												she quickly learns how tough it is to enforce the law. Determined to
+												prove herself,
+												Judy jumps at the opportunity to solve a mysterious case. Unfortunately,
+												that means working with Nick Wilde (Jason Bateman),
 												a wily fox who makes her job even harder.
 											</p>
 											<h4>Star Cast</h4>
@@ -896,13 +891,12 @@ session_start(); ?>
 											</p>
 										</div>
 										<div class="bookbtn">
-											<button type="button" class="btn btn-success"
-												onclick="location.href='ticket-booking.php';">Book</button>
+											<button type="button" class="btn btn-success" onclick="location.href='ticket-booking.php';">Book</button>
 										</div>
 									</div>
 								</div>
 							</div>
-				
+
 						</div>
 					</div>
 					<div class="item vhny-grid">
@@ -921,23 +915,21 @@ session_start(); ?>
 									</h4>
 								</div>
 							</a>
-							
-							<div class="modal fade Toystory" id="myModal" tabindex="-1" role="dialog"
-								aria-hidden="true">
+
+							<div class="modal fade Toystory" id="myModal" tabindex="-1" role="dialog" aria-hidden="true">
 								<div class="modal-dialog" role="document">
 									<div class="modal-content" id="mymodalcontent">
 										<div class="modal-header">
 											<h4 class="modal-title" id="exampleModalLongTitle">DETAILS</h4>
-											<button type="button" class="closebtn" data-dismiss="modal"
-												aria-label="Close">
+											<button type="button" class="closebtn" data-dismiss="modal" aria-label="Close">
 												<span aria-hidden="true">&times;</span>
 											</button>
 										</div>
 										<div class="modal-body" id="dynamic-content">
 											<img src="assets/images/m8.jpg" class="img-fluid modalimg" alt="" />
 											<p>
-												<h3>Release Date&nbsp;:June 21, 2019 </h3>
-												<h3>Venue&nbsp;:Cg Road </h3>
+											<h3>Release Date&nbsp;:June 21, 2019 </h3>
+											<h3>Venue&nbsp;:Cg Road </h3>
 											</p>
 											<h4>About Movie</h4>
 											<p>
@@ -964,22 +956,21 @@ session_start(); ?>
 											</p>
 										</div>
 										<div class="bookbtn">
-											<button type="button" class="btn btn-success"
-												onclick="location.href='ticket-booking.php';">Book</button>
+											<button type="button" class="btn btn-success" onclick="location.href='ticket-booking.php';">Book</button>
 										</div>
 									</div>
 								</div>
 							</div>
-							
+
 						</div>
 					</div>
-				</div>	
+				</div>
 	</section>
 	<section class="w3l-albums py-5" id="projects">
 		<div class="container py-lg-4">
 			<div class="row">
 				<div class="col-lg-12 mx-auto">
-					
+
 					<div id="parentHorizontalTab">
 						<ul class="resp-tabs-list hor_1">
 							<li>Recent Movies</li>
@@ -990,14 +981,13 @@ session_start(); ?>
 						<div class="resp-tabs-container hor_1">
 							<div class="albums-content">
 								<div class="row">
-									
+
 									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
 										<div class="slider-info">
 											<div class="img-circle">
 												<a href="movies.php">
 
-													<img src="assets/images/m6.jpg" class="img-fluid"
-														alt="author image">
+													<img src="assets/images/m6.jpg" class="img-fluid" alt="author image">
 													<div class="overlay-icon">
 
 														<span class="fa fa-play video-icon" aria-hidden="true"></span>
@@ -1020,8 +1010,7 @@ session_start(); ?>
 									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
 										<div class="slider-info">
 											<div class="img-circle">
-												<a href="movies.php"><img src="assets/images/m5.jpg" class="img-fluid"
-														alt="author image">
+												<a href="movies.php"><img src="assets/images/m5.jpg" class="img-fluid" alt="author image">
 													<div class="overlay-icon">
 
 														<span class="fa fa-play video-icon" aria-hidden="true"></span>
@@ -1044,8 +1033,7 @@ session_start(); ?>
 									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
 										<div class="slider-info">
 											<div class="img-circle">
-												<a href="movies.php"><img src="assets/images/m4.jpg" class="img-fluid"
-														alt="author image">
+												<a href="movies.php"><img src="assets/images/m4.jpg" class="img-fluid" alt="author image">
 													<div class="overlay-icon">
 
 														<span class="fa fa-play video-icon" aria-hidden="true"></span>
@@ -1068,8 +1056,7 @@ session_start(); ?>
 									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
 										<div class="slider-info">
 											<div class="img-circle">
-												<a href="movies.php"><img src="assets/images/Trans.jpg" class="img-fluid"
-														alt="author image">
+												<a href="movies.php"><img src="assets/images/Trans.jpg" class="img-fluid" alt="author image">
 													<div class="overlay-icon">
 
 														<span class="fa fa-play video-icon" aria-hidden="true"></span>
@@ -1092,8 +1079,7 @@ session_start(); ?>
 									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
 										<div class="slider-info">
 											<div class="img-circle">
-												<a href="movies.php"><img src="assets/images/m2.jpg" class="img-fluid"
-														alt="author image">
+												<a href="movies.php"><img src="assets/images/m2.jpg" class="img-fluid" alt="author image">
 													<div class="overlay-icon">
 
 														<span class="fa fa-play video-icon" aria-hidden="true"></span>
@@ -1116,8 +1102,7 @@ session_start(); ?>
 									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
 										<div class="slider-info">
 											<div class="img-circle">
-												<a href="movies.php"><img src="assets/images/m3.jpg" class="img-fluid"
-														alt="author image">
+												<a href="movies.php"><img src="assets/images/m3.jpg" class="img-fluid" alt="author image">
 													<div class="overlay-icon">
 
 														<span class="fa fa-play video-icon" aria-hidden="true"></span>
@@ -1140,8 +1125,7 @@ session_start(); ?>
 									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
 										<div class="slider-info">
 											<div class="img-circle">
-												<a href="movies.php"><img src="assets/images/n1.jpg" class="img-fluid"
-														alt="author image">
+												<a href="movies.php"><img src="assets/images/n1.jpg" class="img-fluid" alt="author image">
 													<span class="fa fa-play video-icon" aria-hidden="true"></span>
 												</a>
 											</div>
@@ -1161,8 +1145,7 @@ session_start(); ?>
 									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
 										<div class="slider-info">
 											<div class="img-circle">
-												<a href="movies.php"><img src="assets/images/n2.jpg" class="img-fluid"
-														alt="author image">
+												<a href="movies.php"><img src="assets/images/n2.jpg" class="img-fluid" alt="author image">
 													<div class="overlay-icon">
 
 														<span class="fa fa-play video-icon" aria-hidden="true"></span>
@@ -1185,8 +1168,7 @@ session_start(); ?>
 									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
 										<div class="slider-info">
 											<div class="img-circle">
-												<a href="movies.php"><img src="assets/images/n3.jpg" class="img-fluid"
-														alt="author image">
+												<a href="movies.php"><img src="assets/images/n3.jpg" class="img-fluid" alt="author image">
 													<div class="overlay-icon">
 
 														<span class="fa fa-play video-icon" aria-hidden="true"></span>
@@ -1210,12 +1192,11 @@ session_start(); ?>
 							</div>
 							<div class="albums-content">
 								<div class="row">
-									
+
 									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
 										<div class="slider-info">
 											<div class="img-circle">
-												<a href="movies.php"><img src="assets/images/m1.jpg" class="img-fluid"
-														alt="author image">
+												<a href="movies.php"><img src="assets/images/m1.jpg" class="img-fluid" alt="author image">
 													<div class="overlay-icon">
 
 														<span class="fa fa-play video-icon" aria-hidden="true"></span>
@@ -1238,8 +1219,7 @@ session_start(); ?>
 									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
 										<div class="slider-info">
 											<div class="img-circle">
-												<a href="movies.php"><img src="assets/images/m2.jpg" class="img-fluid"
-														alt="author image">
+												<a href="movies.php"><img src="assets/images/m2.jpg" class="img-fluid" alt="author image">
 													<div class="overlay-icon">
 
 														<span class="fa fa-play video-icon" aria-hidden="true"></span>
@@ -1262,8 +1242,7 @@ session_start(); ?>
 									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
 										<div class="slider-info">
 											<div class="img-circle">
-												<a href="movies.php"><img src="assets/images/m3.jpg" class="img-fluid"
-														alt="author image">
+												<a href="movies.php"><img src="assets/images/m3.jpg" class="img-fluid" alt="author image">
 													<div class="overlay-icon">
 
 														<span class="fa fa-play video-icon" aria-hidden="true"></span>
@@ -1286,8 +1265,7 @@ session_start(); ?>
 									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
 										<div class="slider-info">
 											<div class="img-circle">
-												<a href="movies.php"><img src="assets/images/m7.jpg" class="img-fluid"
-														alt="author image">
+												<a href="movies.php"><img src="assets/images/m7.jpg" class="img-fluid" alt="author image">
 													<div class="overlay-icon">
 
 														<span class="fa fa-play video-icon" aria-hidden="true"></span>
@@ -1310,8 +1288,7 @@ session_start(); ?>
 									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
 										<div class="slider-info">
 											<div class="img-circle">
-												<a href="movies.php"><img src="assets/images/m8.jpg" class="img-fluid"
-														alt="author image">
+												<a href="movies.php"><img src="assets/images/m8.jpg" class="img-fluid" alt="author image">
 													<div class="overlay-icon">
 
 														<span class="fa fa-play video-icon" aria-hidden="true"></span>
@@ -1334,8 +1311,7 @@ session_start(); ?>
 									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
 										<div class="slider-info">
 											<div class="img-circle">
-												<a href="movies.php"><img src="assets/images/m9.jpg" class="img-fluid"
-														alt="author image">
+												<a href="movies.php"><img src="assets/images/m9.jpg" class="img-fluid" alt="author image">
 													<div class="overlay-icon">
 
 														<span class="fa fa-play video-icon" aria-hidden="true"></span>
@@ -1359,12 +1335,11 @@ session_start(); ?>
 							</div>
 							<div class="albums-content">
 								<div class="row">
-									
+
 									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
 										<div class="slider-info">
 											<div class="img-circle">
-												<a href="movies.php"><img src="assets/images/m7.jpg" class="img-fluid"
-														alt="author image">
+												<a href="movies.php"><img src="assets/images/m7.jpg" class="img-fluid" alt="author image">
 													<div class="overlay-icon">
 
 														<span class="fa fa-play video-icon" aria-hidden="true"></span>
@@ -1387,8 +1362,7 @@ session_start(); ?>
 									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
 										<div class="slider-info">
 											<div class="img-circle">
-												<a href="movies.php"><img src="assets/images/m8.jpg" class="img-fluid"
-														alt="author image">
+												<a href="movies.php"><img src="assets/images/m8.jpg" class="img-fluid" alt="author image">
 													<div class="overlay-icon">
 
 														<span class="fa fa-play video-icon" aria-hidden="true"></span>
@@ -1411,8 +1385,7 @@ session_start(); ?>
 									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
 										<div class="slider-info">
 											<div class="img-circle">
-												<a href="movies.php"><img src="assets/images/m9.jpg" class="img-fluid"
-														alt="author image">
+												<a href="movies.php"><img src="assets/images/m9.jpg" class="img-fluid" alt="author image">
 													<div class="overlay-icon">
 
 														<span class="fa fa-play video-icon" aria-hidden="true"></span>
@@ -1432,12 +1405,11 @@ session_start(); ?>
 										</div>
 
 									</div>
-									
+
 									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
 										<div class="slider-info">
 											<div class="img-circle">
-												<a href="movies.php"><img src="assets/images/m10.jpg" class="img-fluid"
-														alt="author image">
+												<a href="movies.php"><img src="assets/images/m10.jpg" class="img-fluid" alt="author image">
 													<div class="overlay-icon">
 
 														<span class="fa fa-play video-icon" aria-hidden="true"></span>
@@ -1459,8 +1431,7 @@ session_start(); ?>
 									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
 										<div class="slider-info">
 											<div class="img-circle">
-												<a href="movies.php"><img src="assets/images/m11.jpg" class="img-fluid"
-														alt="author image">
+												<a href="movies.php"><img src="assets/images/m11.jpg" class="img-fluid" alt="author image">
 													<div class="overlay-icon">
 
 														<span class="fa fa-play video-icon" aria-hidden="true"></span>
@@ -1482,8 +1453,7 @@ session_start(); ?>
 									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
 										<div class="slider-info">
 											<div class="img-circle">
-												<a href="movies.php"><img src="assets/images/m12.jpg" class="img-fluid"
-														alt="author image">
+												<a href="movies.php"><img src="assets/images/m12.jpg" class="img-fluid" alt="author image">
 													<div class="overlay-icon">
 
 														<span class="fa fa-play video-icon" aria-hidden="true"></span>
@@ -1511,7 +1481,7 @@ session_start(); ?>
 			</div>
 		</div>
 	</section>
-	
+
 	<footer class="w3l-footer">
 		<section class="footer-inner-main">
 			<div class="footer-hny-grids py-5">
@@ -1520,20 +1490,16 @@ session_start(); ?>
 						<div class="right-side">
 							<div class="row footer-about">
 								<div class="col-md-3 col-6 footer-img mb-lg-0 mb-4">
-									<a href="movies.php"><img class="img-fluid" src="assets/images/banner1.jpg"
-											alt=""></a>
+									<a href="movies.php"><img class="img-fluid" src="assets/images/banner1.jpg" alt=""></a>
 								</div>
 								<div class="col-md-3 col-6 footer-img mb-lg-0 mb-4">
-									<a href="movies.php"><img class="img-fluid" src="assets/images/banner2.jpg"
-											alt=""></a>
+									<a href="movies.php"><img class="img-fluid" src="assets/images/banner2.jpg" alt=""></a>
 								</div>
 								<div class="col-md-3 col-6 footer-img mb-lg-0 mb-4">
-									<a href="movies.php"><img class="img-fluid" src="assets/images/banner3.jpg"
-											alt=""></a>
+									<a href="movies.php"><img class="img-fluid" src="assets/images/banner3.jpg" alt=""></a>
 								</div>
 								<div class="col-md-3 col-6 footer-img mb-lg-0 mb-4">
-									<a href="movies.php"><img class="img-fluid" src="assets/images/banner4.jpg"
-											alt=""></a>
+									<a href="movies.php"><img class="img-fluid" src="assets/images/banner4.jpg" alt=""></a>
 								</div>
 							</div>
 							<div class="row footer-links">
@@ -1608,12 +1574,12 @@ session_start(); ?>
 					</div>
 				</div>
 			</div>
-			
+
 			<button onclick="topFunction()" id="movetop" title="Go to top">
 				<span class="fa fa-arrow-up" aria-hidden="true"></span>
 			</button>
 			<script>
-				window.onscroll = function () {
+				window.onscroll = function() {
 					scrollFunction()
 				};
 
@@ -1624,12 +1590,13 @@ session_start(); ?>
 						document.getElementById("movetop").style.display = "none";
 					}
 				}
+
 				function topFunction() {
 					document.body.scrollTop = 0;
 					document.documentElement.scrollTop = 0;
 				}
 			</script>
-			
+
 
 		</section>
 	</footer>
@@ -1641,7 +1608,7 @@ session_start(); ?>
 <script src="assets/js/theme-change.js"></script>
 <script src="assets/js/owl.carousel.js"></script>
 <script>
-	$(document).ready(function () {
+	$(document).ready(function() {
 		$('.owl-four').owlCarousel({
 			loop: true,
 			margin: 20,
@@ -1673,7 +1640,7 @@ session_start(); ?>
 	})
 </script>
 <script>
-	$(document).ready(function () {
+	$(document).ready(function() {
 		$('.owl-two').owlCarousel({
 			loop: true,
 			margin: 40,
@@ -1706,14 +1673,14 @@ session_start(); ?>
 	})
 </script>
 <script>
-	$(function () {
-		$('.navbar-toggler').click(function () {
+	$(function() {
+		$('.navbar-toggler').click(function() {
 			$('body').toggleClass('noscroll');
 		})
 	});
 </script>
 <script>
-	$(window).on("scroll", function () {
+	$(window).on("scroll", function() {
 		var scroll = $(window).scrollTop();
 
 		if (scroll >= 80) {
@@ -1722,14 +1689,14 @@ session_start(); ?>
 			$("#site-header").removeClass("nav-fixed");
 		}
 	});
-	$(".navbar-toggler").on("click", function () {
+	$(".navbar-toggler").on("click", function() {
 		$("header").toggleClass("active");
 	});
-	$(document).on("ready", function () {
+	$(document).on("ready", function() {
 		if ($(window).width() > 991) {
 			$("header").removeClass("active");
 		}
-		$(window).on("resize", function () {
+		$(window).on("resize", function() {
 			if ($(window).width() > 991) {
 				$("header").removeClass("active");
 			}
@@ -1738,13 +1705,13 @@ session_start(); ?>
 </script>
 <script src="assets/js/easyResponsiveTabs.js"></script>
 <script type="text/javascript">
-	$(document).ready(function () {
+	$(document).ready(function() {
 		$('#parentHorizontalTab').easyResponsiveTabs({
-			type: 'default', 
-			width: 'auto', 
-			fit: true, 
-			tabidentify: 'hor_1', 
-			activate: function (event) { 
+			type: 'default',
+			width: 'auto',
+			fit: true,
+			tabidentify: 'hor_1',
+			activate: function(event) {
 				var $tab = $(this);
 				var $info = $('#nested-tabInfo');
 				var $name = $('span', $info);
