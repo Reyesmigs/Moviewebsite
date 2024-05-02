@@ -17,9 +17,7 @@
 	<header id="site-header" class="w3l-header fixed-top">
 		<nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-3">
 			<div class="container">
-				<h1><a class="navbar-brand" href="dashboard.php"><span class="fa fa-play icon-log"
-							aria-hidden="true"></span>
-							MyShowz </a></h1>
+				<h1><a class="navbar-brand" href="dashboard.php"><span class="fa fa-play icon-log" aria-hidden="true"></span> Myflex </a></h1>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 				</div>
 				<div class="Login_SignUp" id="login_s">

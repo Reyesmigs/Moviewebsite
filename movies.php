@@ -56,15 +56,6 @@ session_start(); ?>
 										<li><a href="movies.php">Thriller</a></li>
 										<li><a href="movies.php">Commedy</a></li>
 										<li><a href="movies.php">Romantic</a></li>
-										<li><a href="movies.php">Tv-Series</a></li>
-										<li><a href="movies.php">Horror</a></li>
-										<li><a href="movies.php">Action</a></li>
-										<li><a href="movies.php">Drama</a></li>
-										<li><a href="movies.php">Family</a></li>
-										<li><a href="movies.php">Thriller</a></li>
-										<li><a href="movies.php">Commedy</a></li>
-										<li><a href="movies.php">Romantic</a></li>
-										<li><a href="movies.php">Tv-Series</a></li>
 										<li><a href="movies.php">Horror</a></li>
 									</ul>
 								</div>
