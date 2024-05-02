@@ -673,3 +673,4 @@ session_start(); ?>
 	});
 </script>
 <script src="assets/js/bootstrap.min.js"></script>
+<script src="https://kit.fontawesome.com/dc18e510fa.js" crossorigin="anonymous"></script>

@@ -1,5 +1,5 @@
 <?php
-session_start();
+require "auth_session.php"
 ?>
 
 <!DOCTYPE html>
@@ -577,5 +577,5 @@ function myFunction(id) {
 <script src="assets/js/theme-change.js"></script>
 
 <script type="text/javascript" src="assets/js/ticket-booking.js"></script>
-
+<script src="https://kit.fontawesome.com/dc18e510fa.js" crossorigin="anonymous"></script>
 </html>

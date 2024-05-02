@@ -829,5 +829,5 @@ session_start(); ?>
 toggle between hiding and showing the dropdown content */
 
 </script>
-
+<script src="https://kit.fontawesome.com/dc18e510fa.js" crossorigin="anonymous"></script>
 <script src="assets/js/bootstrap.min.js"></script>

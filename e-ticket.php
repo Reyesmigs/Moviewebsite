@@ -200,5 +200,6 @@
             </table>
         </div>
     </div>
+    <script src="https://kit.fontawesome.com/dc18e510fa.js" crossorigin="anonymous"></script>
 </body>
 </html>

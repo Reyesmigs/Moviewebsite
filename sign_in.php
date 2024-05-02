@@ -13,6 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="assets/css/sign-in.css">
 </head>
 
+
 <body>
 	<header id="site-header" class="w3l-header fixed-top">
 		<nav class="navbar navbar-expand-lg navbar-light fill px-lg-0 py-0 px-3">
@@ -74,25 +75,69 @@
       }
   } else {
        ?>
-		<form action="sign_in.php" method="post"> 
+		<form action="sign_in.php" method="post" style="color: var(--theme-title);" > 
 				<h1>Create Account</h1>
 				<div class="social-container">
-					<a href="#" class="social"><i class="fab fa-facebook-f"></i></a>
-					<a href="#" class="social"><i class="fab fa-google-plus-g"></i></a>
-					<a href="#" class="social"><i class="fab fa-linkedin-in"></i></a>
+					<a href="https://www.facebook.com" class="social" style="color: var(--theme-title);"><i class="fab fa-facebook-f"></i></a>
+					<a href="https://www.youtube.com/" class="social" style="color: var(--theme-title);"><i class="fa-brands fa-youtube"></i></a>
+					<a href="https://www.instagram.com/" class="social" style="color: var(--theme-title);"><i class="fa-brands fa-instagram"></i></a>
 				</div>
 				<span>or use your email for registration</span>
 				<input name="username" type="text" name placeholder="Username" required/>
 				<input name="email" type="email" placeholder="Email" required/>
 				<input name="password" type="password" placeholder="Password" required/>
 				<button>Sign Up</button>
+				<br>
+				<span class="link"><a href="login.php">Click to Login</a></span>
 			</form>
 			<?php
   }
   ?>
-<p class="link"><a href="login.php">Click to Login</a></p>
 		</div>
 	</div>
-</body>
+	
+	<script type="text/javascript" src="assets/js/as-alert-message.min.js"></script>
+	<script src="assets/js/jquery-3.3.1.min.js"></script>
+	<!--/theme-change-->
+	<script src="assets/js/theme-change.js"></script>
+	<!-- disable body scroll which navbar is in active -->
+	<script>
+		$(function () {
+			$('.navbar-toggler').click(function () {
+				$('body').toggleClass('noscroll');
+			})
+		});
+	</script>
+	<!-- disable body scroll which navbar is in active -->
+	<!--/MENU-JS-->
+	<script>
+		$(window).on("scroll", function () {
+			var scroll = $(window).scrollTop();
 
+			if (scroll >= 80) {
+				$("#site-header").addClass("nav-fixed");
+			} else {
+				$("#site-header").removeClass("nav-fixed");
+			}
+		});
+
+		//Main navigation Active Class Add Remove
+		$(".navbar-toggler").on("click", function () {
+			$("header").toggleClass("active");
+		});
+		$(document).on("ready", function () {
+			if ($(window).width() > 991) {
+				$("header").removeClass("active");
+			}
+			$(window).on("resize", function () {
+				if ($(window).width() > 991) {
+					$("header").removeClass("active");
+				}
+			});
+		});
+	</script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="assets/js/sign-in.js"></script>
+</body>
+<script src="https://kit.fontawesome.com/dc18e510fa.js" crossorigin="anonymous"></script>
 </html>

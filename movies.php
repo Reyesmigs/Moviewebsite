@@ -128,7 +128,7 @@ session_start(); ?>
 										<span class="post fa fa-heart text-right"></span>
 									</h4>
 								</div>
-								<span class="fa fa-play video-icon" aria-hidden="true"></span>
+								<span class="fa-solid fa-circle-play video-icon" aria-hidden="true"></span>
 							</a>
 						</div>
 						<div class="box16 mt-4">
@@ -145,7 +145,7 @@ session_start(); ?>
 										<span class="post fa fa-heart text-right"></span>
 									</h4>
 								</div>
-								<span class="fa fa-play video-icon" aria-hidden="true"></span>
+								<span class="fa-solid fa-circle-play video-icon" aria-hidden="true"></span>
 							</a>
 						</div>
 					</div>
@@ -1712,5 +1712,5 @@ session_start(); ?>
 		});
 	});
 </script>
-
+<script src="https://kit.fontawesome.com/dc18e510fa.js" crossorigin="anonymous"></script>
 <script src="assets/js/bootstrap.min.js"></script>
