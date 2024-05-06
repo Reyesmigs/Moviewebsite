@@ -25,7 +25,7 @@ session_start(); ?>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ml-auto">
 						<li class="nav-item">
-							<a class="nav-link" href="dashboard.php">Home</a>
+							<a class="nav-link" href="dashboard"></a>Home</a>
 						</li>
 						<li class="nav-item active">
 							<a class="nav-link" href="movies.php">Movies</a>
@@ -102,7 +102,7 @@ session_start(); ?>
 	<div class="w3l-breadcrumbs">
 		<nav id="breadcrumbs" class="breadcrumbs">
 			<div class="container page-wrapper">
-				<a href="index.php">Home</a> » <span class="breadcrumb_last" aria-current="page">movies</span>
+				<a href="dashboard.php">Home</a> » <span class="breadcrumb_last" aria-current="page">movies</span>
 			</div>
 		</nav>
 	</div>
@@ -121,10 +121,7 @@ session_start(); ?>
 								</figure>
 								<div class="box-content">
 									<h3 class="title">Avengers End Game</h3>
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
-
-										</span>
-
+									<h4> <span class="post"><span class="fa fa-clock-o"> </span>1 Hr 4min</span>
 										<span class="post fa fa-heart text-right"></span>
 									</h4>
 								</div>
@@ -164,7 +161,7 @@ session_start(); ?>
 										<span class="post fa fa-heart text-right"></span>
 									</h4>
 								</div>
-								<span class="fa fa-play video-icon" aria-hidden="true"></span>
+								<span class="fa-solid fa-circle-play video-icon" aria-hidden="true"></span>
 							</a>
 						</div>
 						<div class="box16 mt-4">
@@ -210,7 +207,7 @@ session_start(); ?>
 								<div class="box-content">
 									<h3 class="title">Fast and Furious</h3>
 									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 40min
-											<span class="post fa fa-heart text-right"></span>
+											
 									</h4>
 								</div>
 							</a>
@@ -646,7 +643,7 @@ session_start(); ?>
 							</figure>
 							<a href=".Joker" data-toggle="modal">
 								<div class="box-content">
-									<h3 class="title">Joker</h3>
+									<h3 class="title">Joker 2</h3>
 									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 2min
 
 										</span>
@@ -1187,7 +1184,7 @@ session_start(); ?>
 									<div class="col-lg-4 new-relise-gd mt-lg-0 mt-0">
 										<div class="slider-info">
 											<div class="img-circle">
-												<a href="movies.php"><img src="assets/images/m1.jpg" class="img-fluid" alt="author image">
+												<a href="movies.php"><img src="assets/images/cars.jpg" class="img-fluid" alt="author image">
 													<div class="overlay-icon">
 
 														<span class="fa fa-play video-icon" aria-hidden="true"></span>
@@ -1196,7 +1193,7 @@ session_start(); ?>
 											</div>
 											<div class="message">
 												<p>English</p>
-												<a class="author-book-title" href="movies.php">Rocketman</a>
+												<a class="author-book-title" href="movies.php">Cars</a>
 												<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
 
 													</span>
@@ -1510,7 +1507,7 @@ session_start(); ?>
 								<div class="col-md-3 col-sm-6 sub-two-right mt-5">
 									<h6>Information</h6>
 									<ul>
-										<li><a href="index.php">Home</a> </li>
+										<li><a href="dashboard.php">Home</a> </li>
 										<li><a href="about.php">About</a> </li>
 										<li><a href="#">Tv Series</a> </li>
 										<li><a href="#">Blogs</a> </li>

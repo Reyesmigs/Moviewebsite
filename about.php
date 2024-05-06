@@ -119,7 +119,7 @@ session_start(); ?>
 	<div class="w3l-breadcrumbs">
 		<nav id="breadcrumbs" class="breadcrumbs">
 			<div class="container page-wrapper">
-				<a href="index.php">Home</a> » <span class="breadcrumb_last" aria-current="page">About</span>
+				<a href="dashboard.php">Home</a> » <span class="breadcrumb_last" aria-current="page">About</span>
 			</div>
 		</nav>
 	</div>
@@ -397,7 +397,7 @@ session_start(); ?>
 								<div class="col-md-3 col-sm-6 sub-two-right mt-5">
 									<h6>Information</h6>
 									<ul>
-										<li><a href="index.php">Home</a> </li>
+										<li><a href="dashboard.php">Home</a> </li>
 										<li><a href="about.php">About</a> </li>
 										<li><a href="#">Tv Series</a> </li>
 										<li><a href="#">Blogs</a> </li>

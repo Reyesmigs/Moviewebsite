@@ -49,20 +49,11 @@ session_start(); ?>
 							<div class="popup">
 								<form action="#" method="post" class="search-box">
 									<input type="search" placeholder="Search your Keyword" name="search" style="color:black" required="required" autofocus="">
-									<button type="submit" class="btn"><span class="fa fa-search"
-											aria-hidden="true"></span></button>
+									<button type="submit" class="btn"><span class="fa fa-search"aria-hidden="true"></span></button>
 								</form>
 								<div class="browse-items">
 									<h3 class="hny-title two mt-md-5 mt-4">Browse all:</h3>
 									<ul class="search-items">
-										<li><a href="movies.php">Action</a></li>
-										<li><a href="movies.php">Drama</a></li>
-										<li><a href="movies.php">Family</a></li>
-										<li><a href="movies.php">Thriller</a></li>
-										<li><a href="movies.php">Commedy</a></li>
-										<li><a href="movies.php">Romantic</a></li>
-										<li><a href="movies.php">Tv-Series</a></li>
-										<li><a href="movies.php">Horror</a></li>
 										<li><a href="movies.php">Action</a></li>
 										<li><a href="movies.php">Drama</a></li>
 										<li><a href="movies.php">Family</a></li>
@@ -89,9 +80,7 @@ session_start(); ?>
             </div>';
     } ?>
 </div>
-
 				</div>
-				
 				<div class="mobile-position">
 					<nav class="navigation">
 						<div class="theme-switch-wrapper">
@@ -129,7 +118,7 @@ session_start(); ?>
 									<h6>Watch Trailer</h6>
 								</a>
 								<div id="small-dialog1" class="zoom-anim-dialog mfp-hide">
-									<iframe src="https://www.youtube.com/watch?v=TcMBFSGVi1c&t=6s" allow="autoplay; fullscreen" allowfullscreen=""></iframe>
+									<iframe src="assets/video/Avengers.mp4" allow="autoplay; fullscreen" allowfullscreen=""></iframe>
 								</div>
 							</div>
 						</div>
@@ -149,8 +138,7 @@ session_start(); ?>
 									<h6>Watch Trailer</h6>
 								</a>
 								<div id="small-dialog2" class="zoom-anim-dialog mfp-hide">
-									<iframe src="https://player.vimeo.com/video/395376850" allow="autoplay; fullscreen"
-										allowfullscreen=""></iframe>
+									<iframe src="https://player.vimeo.com/video/395376850" allow="autoplay; fullscreen"allowfullscreen=""></iframe>
 								</div>
 							</div>
 						</div>
@@ -222,14 +210,11 @@ session_start(); ?>
 								</figure>
 								<div class="box-content">
 									<h3 class="title">Escape Room</h3>
-									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min
-
-										</span>
-
-										<span class="post fa fa-heart text-right"></span>
+									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 1 Hr 4min</span>
+									<span class="post fa fa-heart text-right"></span>
 									</h4>
 								</div>
-								<span class="fa fa-play video-icon" aria-hidden="true"></span>
+								
 							</a>
 						</div>
 					</div>
@@ -248,7 +233,7 @@ session_start(); ?>
 										<span class="post fa fa-heart text-right"></span>
 									</h4>
 								</div>
-								<span class="fa fa-play video-icon" aria-hidden="true"></span>
+								
 							</a>
 						</div>
 					</div>
@@ -267,7 +252,7 @@ session_start(); ?>
 										<span class="post fa fa-heart text-right"></span>
 									</h4>
 								</div>
-								<span class="fa fa-play video-icon" aria-hidden="true"></span>
+								
 							</a>
 						</div>
 					</div>
@@ -286,7 +271,7 @@ session_start(); ?>
 										<span class="post fa fa-heart text-right"></span>
 									</h4>
 								</div>
-								<span class="fa fa-play video-icon" aria-hidden="true"></span>
+								
 							</a>
 						</div>
 					</div>
@@ -322,15 +307,14 @@ session_start(); ?>
 										<span class="post fa fa-heart text-right"></span>
 									</h4>
 								</div>
-								<span class="fa fa-play video-icon" aria-hidden="true"></span>
+								
 							</a>
 						</div>
 						<h3> <a class="title-gd" href="movies.php">No Time to Die</a></h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+						<p>The proper function of man is to live, not to exist.</p>
 						<div class="button-center text-center mt-4">
 							<a href="movies.php" class="btn watch-button">Watch now</a>
 						</div>
-
 					</div>
 					<div class="item vhny-grid">
 						<div class="box16 mb-0">
@@ -347,11 +331,10 @@ session_start(); ?>
 										<span class="post fa fa-heart text-right"></span>
 									</h4>
 								</div>
-								<span class="fa fa-play video-icon" aria-hidden="true"></span>
 							</a>
 						</div>
 						<h3> <a class="title-gd" href="movies.php">Mulan</a></h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+						<p>There Is No Courage Without Fear.</p>
 						<div class="button-center text-center mt-4">
 							<a href="movies.php" class="btn watch-button">Watch now</a>
 						</div>
@@ -371,11 +354,11 @@ session_start(); ?>
 										<span class="post fa fa-heart text-right"></span>
 									</h4>
 								</div>
-								<span class="fa fa-play video-icon" aria-hidden="true"></span>
+								
 							</a>
 						</div>
 						<h3> <a class="title-gd" href="movies.php">Free Guy</a></h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+						<p>Don't Have A Good Day, Have A Great Day!</p>
 						<div class="button-center text-center mt-4">
 							<a href="movies.php" class="btn watch-button">Watch now</a>
 						</div>
@@ -395,15 +378,13 @@ session_start(); ?>
 										<span class="post fa fa-heart text-right"></span>
 									</h4>
 								</div>
-								<span class="fa fa-play video-icon" aria-hidden="true"></span>
 							</a>
 						</div>
 						<h3> <a class="title-gd" href="movies.php">My Spy</a></h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+						<p>Some will make you laugh other make you important in their life!</p>
 						<div class="button-center text-center mt-4">
 							<a href="movies.php" class="btn watch-button">Watch now</a>
 						</div>
-
 					</div>
 					<div class="item vhny-grid">
 						<div class="box16 mb-0">
@@ -412,19 +393,15 @@ session_start(); ?>
 									<img class="img-fluid" src="assets/images/n5.jpg" alt="">
 								</figure>
 								<div class="box-content">
-
 									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
-										</span>
-
+									</span>
 										<span class="post fa fa-heart text-right"></span>
 									</h4>
 								</div>
-								<span class="fa fa-play video-icon" aria-hidden="true"></span>
 							</a>
 						</div>
 						<h3> <a class="title-gd" href="movies.php">Scoob</a></h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+						<p>Scooby-Dooby-Doo!</p>
 						<div class="button-center text-center mt-4">
 							<a href="movies.php" class="btn watch-button">Watch now</a>
 						</div>
@@ -436,19 +413,15 @@ session_start(); ?>
 									<img class="img-fluid" src="assets/images/n6.jpg" alt="">
 								</figure>
 								<div class="box-content">
-
 									<h4> <span class="post"><span class="fa fa-clock-o"> </span> 2 Hr 4min
-
 										</span>
-
 										<span class="post fa fa-heart text-right"></span>
 									</h4>
 								</div>
-								<span class="fa fa-play video-icon" aria-hidden="true"></span>
 							</a>
 						</div>
 						<h3> <a class="title-gd" href="movies.php">Downhill</a></h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+						<p>You're not in my body. It's cold and dumb.</p>
 						<div class="button-center text-center mt-4">
 							<a href="movies.php" class="btn watch-button">Watch now</a>
 						</div>
@@ -542,18 +515,18 @@ session_start(); ?>
 								<div class="col-md-3 col-sm-6 sub-two-right mt-5">
 									<h6>Movies</h6>
 									<ul>
-										<li><a href="#">Movies</a></li>
-										<li><a href="#">Videos</a></li>
-										<li><a href="#">English Movies</a></li>
+										<li><a href="movies.php">Movies</a></li>
+										<li><a href="movies.php">Videos</a></li>
+										<li><a href="movies.php">English Movies</a></li>
 										<li><a href="#">Tailor</a></li>
-										<li><a href="#">Upcoming Movies</a></li>
+										<li><a href="movies.php">Upcoming Movies</a></li>
 										<li><a href="Contact_Us.php">Contact Us</a></li>
 									</ul>
 								</div>
 								<div class="col-md-3 col-sm-6 sub-two-right mt-5">
 									<h6>Information</h6>
 									<ul>
-										<li><a href="index.php">Home</a> </li>
+										<li><a href="dashboard.php">Home</a> </li>
 										<li><a href="about.php">About</a> </li>
 										<li><a href="#">Tv Series</a> </li>
 										<li><a href="#">Blogs</a> </li>
